@@ -9,21 +9,74 @@ body {
   font-family: "Open Sans";
 }
 main {
+  padding: 30px;
+}
+.container {
+  width: fit-content;
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%)
+  margin: 40px auto;
+}
+@media (min-width:768px) {
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 .card {
-  width: calc(100% / 3);
+  width: 300px;
+  padding: 40px;
+  color: white;
+  transition: 1s;
+}
+.card:first-child {
+  background-color: #e28525;
+}
+.card:nth-child(2) {
+  background-color: #016972;
+}
+.card:last-child {
+  background-color: #00403f;
 }
 @media (max-width:767px) {
   .card {
     width: 100%;
   }
 }
-
+.card p {
+  margin: 50px 0;
+  line-height: 2;
+}
+.card button {
+  background-color: white;
+  border: none;
+  padding: 20px;
+  width: 80%;
+  border-radius: 30px;
+  font-size: 20px;
+  transition: .3s;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 16px;
+}
+.card button:first-child {
+  color: #e28525;
+}
+.card button:nth-child(2) {
+  color: #016972;
+}
+.card button:last-child {
+  color: #00403f;
+}
+.sdf {
+  display: grid;
+  
+}
 
 
